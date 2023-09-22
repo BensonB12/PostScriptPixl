@@ -1,0 +1,26 @@
+/arg {exch def} def
+
+/sqr {
+    0 dict begin
+    /y arg
+    /x arg
+    /size arg
+
+    newpath 
+    x y moveto
+    x size add y lineto
+    x size add y size add lineto
+    x y size add lineto
+    x y lineto
+    fill
+    end
+} def
+
+% size x y
+
+3 0 0 setrgbcolor
+50 50 500 sqr
+.4 .4 1 setrgbcolor
+50 100 500 sqr
+stack
+showpage

@@ -1,0 +1,24 @@
+
+/t {
+    pop
+    exec
+} def
+
+/f {
+    exach
+    pop
+    exach
+} def
+
+/ifelse {
+    3 -1 roll
+    exec
+} def
+
+/odd {
+    2 mod 1 eq
+} def
+
+%[1 2 3 4] { dup *} map
+%[1 2 3 4 5] aload
+stack
