@@ -1,6 +1,16 @@
+% Benson Bird, 9/25/2023, Project Squires
+%
+% 1. We do not use parathesis in postscript/stack languages because all it needs is the stack we make.
+%       If it takes parameters, it just takes the next value in the stack
+%
+% 2a. I found it interesting that that everything uses the stack. That the stack can just cascade down
+%       until everthing on the stack is gone. It is very fun to visualize, and for me, easier to visualize
+%       than clojure.
+% 2a. I love how easy it is to create colors and shapes. I think that will be very fun and intersting
+
 /arg {exch def} def
 
-/sqr {
+/drawsquare {
     0 dict begin
     /y arg
     /x arg
@@ -18,9 +28,128 @@
 
 % size x y
 
-3 0 0 setrgbcolor
-50 50 500 sqr
-.4 .4 1 setrgbcolor
-50 100 500 sqr
+1 .1 .7 setrgbcolor % shade of pink
+20 40 440 drawsquare %left cheek
+50 20 395 drawsquare
+20 40 380 drawsquare
+
+5 .3 .9 setrgbcolor % diffrent shade of pink
+60 220 380 drawsquare % diffrent shape
+
+0 .3 1 setrgbcolor % blue
+20 80 450 drawsquare
+20 200 450 drawsquare
+
+.5 setgray
+70 480 390 drawsquare
+
+0 0 0 setrgbcolor % black
+20 0 420 drawsquare
+20 0 400 drawsquare
+20 20 380 drawsquare
+20 40 360 drawsquare
+20 60 340 drawsquare
+20 80 320 drawsquare
+20 100 300 drawsquare % start of bottom line
+20 120 300 drawsquare
+20 140 300 drawsquare
+20 160 300 drawsquare
+20 180 300 drawsquare
+20 200 300 drawsquare
+20 220 300 drawsquare
+20 240 300 drawsquare
+20 260 300 drawsquare
+20 280 300 drawsquare
+20 300 300 drawsquare 
+20 320 300 drawsquare 
+20 340 300 drawsquare
+20 360 300 drawsquare
+20 380 300 drawsquare % end of bottom line
+20 400 320 drawsquare
+20 420 340 drawsquare
+20 440 360 drawsquare
+20 460 380 drawsquare
+20 460 400 drawsquare
+20 480 420 drawsquare
+20 480 440 drawsquare
+20 480 460 drawsquare
+20 480 480 drawsquare
+20 480 500 drawsquare
+20 460 520 drawsquare
+20 460 540 drawsquare
+20 460 560 drawsquare
+20 440 580 drawsquare
+20 420 600 drawsquare
+20 400 620 drawsquare
+20 380 620 drawsquare
+20 360 640 drawsquare
+20 340 640 drawsquare
+20 320 640 drawsquare
+20 320 620 drawsquare
+20 320 660 drawsquare
+20 320 680 drawsquare
+20 320 700 drawsquare
+20 300 720 drawsquare
+20 280 700 drawsquare
+20 260 680 drawsquare
+20 240 680 drawsquare
+20 280 660 drawsquare
+20 260 640 drawsquare
+20 240 620 drawsquare
+20 220 600 drawsquare
+20 180 600 drawsquare
+20 220 660 drawsquare
+20 240 660 drawsquare
+20 220 640 drawsquare
+20 200 640 drawsquare
+20 200 620 drawsquare
+20 300 600 drawsquare
+20 300 560 drawsquare
+20 260 580 drawsquare
+20 280 580 drawsquare
+20 220 560 drawsquare
+20 240 560 drawsquare
+20 240 700 drawsquare
+20 240 720 drawsquare
+20 240 740 drawsquare
+20 220 740 drawsquare
+20 200 720 drawsquare
+20 180 720 drawsquare
+20 160 700 drawsquare
+20 140 680 drawsquare
+20 120 660 drawsquare
+20 100 640 drawsquare
+20 100 620 drawsquare
+20 100 600 drawsquare
+20  80 580 drawsquare
+20 120 580 drawsquare
+20 140 600 drawsquare
+20 140 620 drawsquare
+20 140 640 drawsquare
+20 160 660 drawsquare
+20 60 560 drawsquare
+20 40 540 drawsquare
+20 40 520 drawsquare
+20 40 500 drawsquare
+20 40 480 drawsquare
+20 40 460 drawsquare
+20 20 440 drawsquare %end of outline
+
+20 140 320 drawsquare
+20 160 340 drawsquare
+20 300 320 drawsquare
+20 320 340 drawsquare
+
+20 80 480 drawsquare %left eye
+20 80 460 drawsquare
+
+
+20 200 480 drawsquare %right eye
+20 200 460 drawsquare
+
+20 140 420 drawsquare %nose
+20 120 440 drawsquare
+20 160 440 drawsquare
+
 stack
 showpage
