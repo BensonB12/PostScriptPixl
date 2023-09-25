@@ -1,0 +1,85 @@
+/arg {exch def} def
+
+/drawsquare {
+    0 dict begin
+    /y arg
+    /x arg
+    /size arg
+
+    newpath 
+    x y moveto
+    x size add y lineto
+    x size add y size add lineto
+    x y size add lineto
+    x y lineto
+    fill
+    end
+} def
+
+/drawEntireBoard {
+    0 dict begin
+
+    /grid arg
+
+    grid aload
+    pop 
+
+    0 drawASingleRow
+    1 drawASingleRow
+    2 drawASingleRow
+    end
+} def
+% size x y drawsquare
+/drawASingleRow
+{
+    0 dict begin
+
+    /rowNum arg
+    /rowValues arg
+
+    rowValues aload
+    %length %removes the top array and puts the length of it on top
+    %/l arg
+
+    0 0 setrgbcolor
+    20 80 rowNum 20 mul drawsquare
+    0 0 setrgbcolor
+    20 60 rowNum 20 mul drawsquare
+    0 0 setrgbcolor
+    20 40 rowNum 20 mul drawsquare
+    0 0 setrgbcolor
+    20 20 rowNum 20 mul drawsquare
+    0 0 setrgbcolor
+    20 0 rowNum 20 mul drawsquare
+
+    %Foreach through the values, putting them in the right rowNum
+
+    end
+} def
+
+/nextGen {
+    0 dict begin
+
+
+
+
+    end
+}
+
+/howManyNeighbors {
+    0 dict begin
+
+    /cell arg
+    /grid arg
+
+
+
+    end
+}
+
+[
+    [0 0 1 0 1]
+    [0 0 0 0 0]
+    [0 0 0 1 0]
+] drawEntireBoard
+
