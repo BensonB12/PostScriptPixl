@@ -1,5 +1,21 @@
-
-/t {
+% int array -> makes an array of int size all null values
+% array {function} forall -> do the function for each value in the array
+% 
+%
+% Late binding - Only look it up when you need it
+% bind changes that to imidiate binding
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+t {
     pop
     exec
 } def
@@ -19,6 +35,18 @@
     2 mod 1 eq
 } def
 
+\d 0 dict def
+
+d (name) (Adam) put
+d (name) get pstack
+d begin name name name end pstack
+
+d ([0 1]) true put
+d ([2 1]) known
+
+
+
+
 %[1 2 3 4] { dup *} map
 %[1 2 3 4 5] aload
-stack
+%stack
